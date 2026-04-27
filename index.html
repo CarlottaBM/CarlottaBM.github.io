@@ -11,67 +11,44 @@
   <header class="site-header">
     <div class="logo">
       <a href="index.html">Carlotta Barone-MacDonald</a>
-      <span>MIT · Quantum Engineering · Technology & Policy</span>
+      <span>MIT | Quantum Engineering | Technology & Policy</span>
     </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="#map">Research Map</a>
-      <a href="#domains">Domains</a>
-      <a href="#future">Future</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="#domains">Research</a>
+      <a href="#domains">Projects</a>
+      <a href="#">Teaching</a>
+      <a href="#">Writing</a>
       <a href="#">CV</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-text">
+    <section class="hero-dark">
+      <div class="hero-copy">
         <p class="eyebrow">My research map</p>
-        <h1>How can we go from the bench to useful applications?</h1>
-        <p class="intro">
+        <h1>Tracing quantum ideas from the lab to the world.</h1>
+        <p>
           I work at the intersection of quantum information, experimental physics,
           engineering, and policy to understand how emerging quantum technologies
-          become credible, scalable, and useful in the real world.
+          become credible, scalable, and useful.
         </p>
-
-        <div class="hero-links">
-          <a class="button primary" href="#map">Explore the map</a>
-          <a class="button secondary" href="#domains">Browse domains</a>
-        </div>
+        <a class="dark-button" href="#domains">Explore the map ↓</a>
       </div>
 
-      <section class="research-map" id="map">
-        <div class="center-node">
-          <span>Bridging</span>
-          <strong>Science & Society</strong>
-          <small>from bench to application</small>
-        </div>
+    <section class="atom-map" id="atom-map" aria-label="Interactive research constellation map">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="orbit orbit-three"></div>
 
-        <a class="domain-node node-info" href="research/quantum-information.html">
-          <h3>Quantum Information</h3>
-          <p>Stabilizer entropies, algorithms, QKD theory.</p>
-        </a>
+      <div class="center-question">
+        <span>How can we</span>
+        <strong>go from the bench to useful applications?</strong>
+      </div>
 
-        <a class="domain-node node-experiment" href="research/experimental-systems.html">
-          <h3>Experimental Systems</h3>
-          <p>ARPA-E work, detectors, measurement pipelines.</p>
-        </a>
-
-        <a class="domain-node node-hardware" href="research/quantum-engineering.html">
-          <h3>Quantum Engineering</h3>
-          <p>QKD, NV centers, superconducting qubits.</p>
-        </a>
-
-        <a class="domain-node node-policy" href="research/policy-field-building.html">
-          <h3>Policy & Field-Building</h3>
-          <p>Credibility, funding, ecosystem development.</p>
-        </a>
-
-        <a class="domain-node node-community" href="research/community-education.html">
-          <h3>Community & Education</h3>
-          <p>Hackathons, teaching, mentoring, outreach.</p>
-        </a>
-      </section>
+      <div id="node-layer"></div>
+    </section>
     </section>
 
     <section class="domains" id="domains">
@@ -81,119 +58,79 @@
       </div>
 
       <article class="domain-card purple">
-        <button class="accordion">
-          <span>Quantum Information</span><span>+</span>
-        </button>
+        <button class="accordion"><span>Quantum Information</span><span>+</span></button>
         <div class="panel">
           <p>Theory, algorithms, and information-theoretic structures of quantum systems.</p>
           <div class="tag-group">
-            <span>Stabilizer Entropies</span>
-            <span>Quantum Algorithms</span>
-            <span>QKD Theory</span>
+            <span>Stabilizer Entropies</span><span>Quantum Algorithms</span><span>QKD Theory</span>
           </div>
           <h4>Future directions</h4>
           <div class="tag-group future">
-            <span>Quantum Advantage</span>
-            <span>Resource Theories</span>
-            <span>Fault Tolerance</span>
+            <span>Quantum Advantage</span><span>Resource Theories</span><span>Fault Tolerance</span>
           </div>
           <a class="text-link" href="research/quantum-information.html">Go deeper →</a>
         </div>
       </article>
 
       <article class="domain-card teal">
-        <button class="accordion">
-          <span>Experimental Systems</span><span>+</span>
-        </button>
+        <button class="accordion"><span>Experimental Systems</span><span>+</span></button>
         <div class="panel">
           <p>Building and measuring quantum systems at the nuclear and atomic scale.</p>
           <div class="tag-group">
-            <span>ARPA-E Nuclear Work</span>
-            <span>CR-39 Detection</span>
-            <span>Measurement Pipelines</span>
+            <span>ARPA-E Nuclear Work</span><span>CR-39 Detection</span><span>Measurement Pipelines</span>
           </div>
           <h4>Future directions</h4>
           <div class="tag-group future">
-            <span>Better Detectors</span>
-            <span>Validation Frameworks</span>
-            <span>New Platforms</span>
+            <span>Better Detectors</span><span>Validation Frameworks</span><span>New Platforms</span>
           </div>
           <a class="text-link" href="research/experimental-systems.html">Go deeper →</a>
         </div>
       </article>
 
       <article class="domain-card orange">
-        <button class="accordion">
-          <span>Quantum Engineering & Hardware</span><span>+</span>
-        </button>
+        <button class="accordion"><span>Quantum Engineering & Hardware</span><span>+</span></button>
         <div class="panel">
           <p>Turning quantum phenomena into controllable hardware and engineering systems.</p>
           <div class="tag-group">
-            <span>QKD Lab</span>
-            <span>NV Centers</span>
-            <span>Prototype Devices</span>
+            <span>QKD Lab</span><span>NV Centers</span><span>Prototype Devices</span>
           </div>
           <h4>Future directions</h4>
           <div class="tag-group future">
-            <span>Superconducting Qubits</span>
-            <span>Control Electronics</span>
-            <span>Cryogenic Systems</span>
+            <span>Superconducting Qubits</span><span>Control Electronics</span><span>Cryogenic Systems</span>
           </div>
           <a class="text-link" href="research/quantum-engineering.html">Go deeper →</a>
         </div>
       </article>
 
       <article class="domain-card blue">
-        <button class="accordion">
-          <span>Policy & Field-Building</span><span>+</span>
-        </button>
+        <button class="accordion"><span>Policy & Field-Building</span><span>+</span></button>
         <div class="panel">
           <p>Understanding how emerging fields gain credibility, resources, and direction.</p>
           <div class="tag-group">
-            <span>MIT Thesis</span>
-            <span>Policy Hackathon</span>
-            <span>Quantum Ecosystem</span>
+            <span>MIT Thesis</span><span>Policy Hackathon</span><span>Quantum Ecosystem</span>
           </div>
           <h4>Future directions</h4>
           <div class="tag-group future">
-            <span>Funding Models</span>
-            <span>Policy Roadmaps</span>
-            <span>Field Validation</span>
+            <span>Funding Models</span><span>Policy Roadmaps</span><span>Field Validation</span>
           </div>
           <a class="text-link" href="research/policy-field-building.html">Go deeper →</a>
         </div>
       </article>
 
       <article class="domain-card pink">
-        <button class="accordion">
-          <span>Community & Education</span><span>+</span>
-        </button>
+        <button class="accordion"><span>Community & Education</span><span>+</span></button>
         <div class="panel">
           <p>Teaching, organizing, and communicating quantum science across communities.</p>
           <div class="tag-group">
-            <span>iQuHack</span>
-            <span>Teaching Quantum in South Africa</span>
-            <span>How to Make Almost Anything</span>
+            <span>iQuHack</span><span>Teaching Quantum in South Africa</span><span>How to Make Almost Anything</span>
           </div>
           <h4>Future directions</h4>
           <div class="tag-group future">
-            <span>Curriculum Development</span>
-            <span>Workshops</span>
-            <span>Broader Access</span>
+            <span>Curriculum Development</span><span>Workshops</span><span>Broader Access</span>
           </div>
           <a class="text-link" href="research/community-education.html">Go deeper →</a>
         </div>
       </article>
-    </section>
-
-    <section class="future-section" id="future">
-      <p class="eyebrow">Next direction</p>
-      <h2>Moving closer to quantum hardware</h2>
-      <p>
-        I am especially interested in superconducting qubits, measurement systems,
-        device-level control, and the practical constraints that shape whether
-        quantum systems can become useful technologies.
-      </p>
     </section>
   </main>
 
