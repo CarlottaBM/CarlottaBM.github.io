@@ -1,15 +1,3 @@
-const cards = document.querySelectorAll(".domain-card");
-
-cards.forEach((card) => {
-  const button = card.querySelector(".accordion");
-  const symbol = button.querySelector("span:last-child");
-
-  button.addEventListener("click", () => {
-    card.classList.toggle("open");
-    symbol.textContent = card.classList.contains("open") ? "−" : "+";
-  });
-});
-
 const researchNodes = [
   {
     id: "quantum-info",
@@ -17,8 +5,7 @@ const researchNodes = [
     subtitle: "Theory, algorithms, QKD.",
     color: "purple",
     x: 50,
-    y: 14,
-    url: "research/quantum-information.html",
+    y: 15,
     children: [
       { title: "Stabilizer Entropies", type: "project" },
       { title: "Quantum Algorithms", type: "project" },
@@ -32,9 +19,8 @@ const researchNodes = [
     title: "Experimental Systems",
     subtitle: "Detectors, measurement, ARPA-E.",
     color: "teal",
-    x: 83,
-    y: 35,
-    url: "research/experimental-systems.html",
+    x: 82,
+    y: 36,
     children: [
       { title: "ARPA-E Nuclear Work", type: "project" },
       { title: "CR-39 Detection", type: "project" },
@@ -50,7 +36,6 @@ const researchNodes = [
     color: "orange",
     x: 70,
     y: 78,
-    url: "research/quantum-engineering.html",
     children: [
       { title: "QKD Lab", type: "project" },
       { title: "NV Centers", type: "project" },
@@ -66,7 +51,6 @@ const researchNodes = [
     color: "pink",
     x: 30,
     y: 78,
-    url: "research/community-education.html",
     children: [
       { title: "iQuHack", type: "project" },
       { title: "Teaching Quantum in South Africa", type: "project" },
@@ -80,9 +64,8 @@ const researchNodes = [
     title: "Policy & Field-Building",
     subtitle: "Credibility, funding, ecosystems.",
     color: "blue",
-    x: 17,
-    y: 35,
-    url: "research/policy-field-building.html",
+    x: 18,
+    y: 36,
     children: [
       { title: "MIT Thesis", type: "project" },
       { title: "Policy Hackathon", type: "project" },
@@ -97,6 +80,8 @@ const layer = document.getElementById("node-layer");
 let activeNode = null;
 
 function renderMap() {
+  if (!layer) return;
+
   layer.innerHTML = "";
 
   researchNodes.forEach((node) => {
@@ -126,27 +111,27 @@ function renderMap() {
 }
 
 function renderChildren(parent) {
-  const radius = 180;
-  const centerX = parent.x;
-  const centerY = parent.y;
   const count = parent.children.length;
+  const spread = 13;
 
   parent.children.forEach((child, index) => {
     const angle = (2 * Math.PI * index) / count - Math.PI / 2;
 
-    const childX = centerX + (Math.cos(angle) * radius) / 9;
-    const childY = centerY + (Math.sin(angle) * radius) / 6;
+    let childX = parent.x + Math.cos(angle) * spread;
+    let childY = parent.y + Math.sin(angle) * spread;
 
-    const line = document.createElement("div");
-    line.className = `node-line ${parent.color}`;
-    line.style.left = `${centerX}%`;
-    line.style.top = `${centerY}%`;
+    childX = Math.max(8, Math.min(92, childX));
+    childY = Math.max(8, Math.min(92, childY));
 
-    const dx = childX - centerX;
-    const dy = childY - centerY;
+    const dx = childX - parent.x;
+    const dy = childY - parent.y;
     const length = Math.sqrt(dx * dx + dy * dy);
     const rotation = Math.atan2(dy, dx) * (180 / Math.PI);
 
+    const line = document.createElement("div");
+    line.className = `node-line ${parent.color}`;
+    line.style.left = `${parent.x}%`;
+    line.style.top = `${parent.y}%`;
     line.style.width = `${length}%`;
     line.style.transform = `rotate(${rotation}deg)`;
 
@@ -171,4 +156,16 @@ document.addEventListener("click", () => {
   renderMap();
 });
 
-renderMap();ca
+renderMap();
+
+const cards = document.querySelectorAll(".domain-card");
+
+cards.forEach((card) => {
+  const button = card.querySelector(".accordion");
+  const symbol = button.querySelector("span:last-child");
+
+  button.addEventListener("click", () => {
+    card.classList.toggle("open");
+    symbol.textContent = card.classList.contains("open") ? "−" : "+";
+  });
+});
