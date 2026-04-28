@@ -112,16 +112,17 @@ function renderMap() {
 
 function renderChildren(parent) {
   const count = parent.children.length;
-  const spread = 13;
+  const spreadX = 22;
+  const spreadY = 26;
 
   parent.children.forEach((child, index) => {
     const angle = (2 * Math.PI * index) / count - Math.PI / 2;
 
-    let childX = parent.x + Math.cos(angle) * spread;
-    let childY = parent.y + Math.sin(angle) * spread;
+    let childX = parent.x + Math.cos(angle) * spreadX;
+    let childY = parent.y + Math.sin(angle) * spreadY;
 
-    childX = Math.max(8, Math.min(92, childX));
-    childY = Math.max(8, Math.min(92, childY));
+    childX = Math.max(6, Math.min(94, childX));
+    childY = Math.max(6, Math.min(94, childY));
 
     const dx = childX - parent.x;
     const dy = childY - parent.y;
