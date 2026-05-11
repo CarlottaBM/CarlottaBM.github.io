@@ -1,33 +1,33 @@
 const directions = {
   "quantum-information": {
-    title: "Quantum Information",
+    title: "Quantum Information Science",
     text: "Studying the resources, limits, and algorithms that make quantum systems useful for computation and simulation.",
     link: "pages/quantum-information.html",
-    projects: ["Stabilizer entropies", "Quantum walks", "Quantum annealing", "Simulation limits"]
+    projects: ["Stabilizer entropies", "Quantum algorithms", "Quantum walks", "Simulation limits"]
   },
-  "quantum-hardware": {
-    title: "Quantum Hardware",
-    text: "Connecting quantum behavior to the devices, controls, and measurements needed to build real systems.",
+  "experimental-systems": {
+    title: "Experimental Quantum Systems",
+    text: "Connecting quantum behavior to devices, controls, measurements, and laboratory platforms.",
     link: "pages/quantum-hardware.html",
-    projects: ["Superconducting qubits", "NV centers", "Quantum optics labs", "Measurement systems"]
-  },
-  "emerging-science": {
-    title: "Emerging Science",
-    text: "Understanding how new research fields form, gain credibility, and develop shared evidence standards.",
-    link: "pages/emerging-science.html",
-    projects: ["Field emergence", "Credibility metrics", "OpenAlex mapping", "Evidence standards"]
+    projects: ["Superconducting qubits", "NV centers", "Quantum optics labs", "Measurement and calibration"]
   },
   "quantum-energy": {
-    title: "Quantum Energy Science",
-    text: "Exploring uncertain and controversial quantum-adjacent energy fields through experimental validation and careful evidence assessment.",
+    title: "Exploring Energy Applications",
+    text: "Exploring quantum-adjacent energy questions through experimental validation, detector design, and careful evidence assessment.",
     link: "pages/quantum-energy.html",
     projects: ["LENR validation", "Metal-hydrogen systems", "Detector pipelines", "Background analysis"]
   },
+  "outreach-education": {
+    title: "Outreach and Education",
+    text: "Building bridges between technical quantum work, public understanding, workforce development, and student communities.",
+    link: "pages/outreach-education.html",
+    projects: ["Quantum hackathons", "Workforce development", "STEM outreach", "Public communication"]
+  },
   "science-policy": {
-    title: "Science Policy",
-    text: "Connecting technical evidence, public funding, innovation systems, and responsible decision-making for emerging technologies.",
+    title: "Science Policy and Field Building",
+    text: "Studying how emerging fields gain credibility, attract funding, and develop institutions that can support responsible innovation.",
     link: "pages/science-policy.html",
-    projects: ["Technology roadmaps", "Public funding", "Responsible innovation", "Quantum workforce"]
+    projects: ["Field building", "Public funding", "Technology roadmaps", "Responsible innovation"]
   }
 };
 
@@ -41,9 +41,12 @@ function renderDirection(key) {
   const direction = directions[key];
   if (!direction) return;
 
+  document.body.dataset.active = key;
+
   buttons.forEach(button => {
-    button.classList.toggle("is-active", button.dataset.direction === key);
-    button.setAttribute("aria-pressed", button.dataset.direction === key ? "true" : "false");
+    const isActive = button.dataset.direction === key;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
   });
 
   title.textContent = direction.title;

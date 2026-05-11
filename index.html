@@ -23,11 +23,11 @@
   <main>
     <section class="hero" id="portfolio">
       <p class="eyebrow">My Research Trajectory</p>
-      <h1>On moving from observing quantum effects to solving real world-issues.</h2>
+      <h1>From observing quantum effects to solving real-world problems.</h1>
       <p class="subtitle">Click a research direction to reveal more about it. Use the explore button to open the full page.</p>
 
       <div class="atom-layout" aria-label="Interactive research atom">
-        <section class="atom-card">
+        <section class="atom-card" aria-label="Research atom visualization">
           <div class="atom-stage" id="atomStage">
             <svg class="orbit-svg" viewBox="0 0 700 700" aria-hidden="true">
               <ellipse class="orbit" cx="350" cy="350" rx="270" ry="110" transform="rotate(0 350 350)" />
@@ -36,38 +36,38 @@
             </svg>
 
             <div class="nucleus">
-              <span>How can we go from observing quantum effects on the bench to solving real world-issues ? 
-
-              </span>
+              <span>How can we go from observing quantum effects on the bench to solving real-world problems?</span>
             </div>
 
-            <button class="electron is-active" type="button" data-direction="quantum-information">
-              <span>Quantum<br>Information</span>
+            <button class="electron is-active" type="button" data-direction="quantum-information" aria-pressed="true">
+              <span>Quantum<br>Information<br>Science</span>
+              <small class="electron-action">Explore</small>
             </button>
-            <button class="electron" type="button" data-direction="experimental-systems">
-              <span>Experimental<br>Systems</span>
+            <button class="electron" type="button" data-direction="experimental-systems" aria-pressed="false">
+              <span>Experimental<br>Quantum<br>Systems</span>
+              <small class="electron-action">Explore</small>
             </button>
-            <!-- <button class="electron" type="button" data-direction="emerging-science">
-              <span>Emerging<br>Science</span> -->
+            <button class="electron" type="button" data-direction="quantum-energy" aria-pressed="false">
+              <span>Exploring<br>Energy<br>Applications</span>
+              <small class="electron-action">Explore</small>
             </button>
-            <button class="electron" type="button" data-direction="quantum-energy">
-              <span>Quantum<br>Energy</span>
+            <button class="electron" type="button" data-direction="outreach-education" aria-pressed="false">
+              <span>Outreach<br>and<br>Education</span>
+              <small class="electron-action">Explore</small>
             </button>
-            <button class="electron" type="button" data-direction="quantum-energy">
-              <span>Quantum<br>Energy</span>
-            </button>
-            <button class="electron" type="button" data-direction="science-policy">
-              <span>Science<br>Policy</span>
+            <button class="electron" type="button" data-direction="science-policy" aria-pressed="false">
+              <span>Science Policy<br>and Field<br>Building</span>
+              <small class="electron-action">Explore</small>
             </button>
           </div>
         </section>
 
         <aside class="detail-card" aria-live="polite">
           <p class="eyebrow">Research direction</p>
-          <h2 id="directionTitle">Quantum Information</h2>
+          <h2 id="directionTitle">Quantum Information Science</h2>
           <p id="directionText">Studying the resources, limits, and algorithms that make quantum systems useful for computation and simulation.</p>
           <div class="project-constellation" id="projectConstellation" aria-label="Projects in this research direction"></div>
-          <a class="button" id="directionLink" href="pages/quantum-information.html">Explore Quantum Information</a>
+          <a class="button" id="directionLink" href="pages/quantum-information.html">Explore Quantum Information Science</a>
         </aside>
       </div>
     </section>
