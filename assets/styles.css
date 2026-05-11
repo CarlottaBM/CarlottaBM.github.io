@@ -1134,3 +1134,60 @@ nav {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Team and collaborators section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.team-card {
+  padding: 22px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid color-mix(in srgb, var(--active-accent) 18%, #e5ded2);
+  box-shadow: 0 14px 38px rgba(31, 41, 55, 0.07);
+}
+
+.team-card-lead {
+  grid-column: 1 / -1;
+  background: color-mix(in srgb, var(--active-accent) 8%, #ffffff);
+}
+
+.team-card h3 {
+  margin: 4px 0 6px;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  letter-spacing: -0.04em;
+}
+
+.team-role {
+  margin: 0;
+  color: var(--active-accent);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.team-affiliation {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.team-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card-lead {
+    grid-column: auto;
+  }
+}
