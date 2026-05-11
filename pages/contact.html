@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
-<body>
+<body data-active="quantum-information">
   <header class="site-header">
     <a class="brand" href="../index.html">Carlotta Barone MacDonald</a>
     <nav aria-label="Main navigation">
@@ -27,19 +27,73 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main class="page">
-    <a class="back-link" href="../index.html">← Back to research atom</a>
-    <article class="page-card">
-      <p class="eyebrow">Contact</p>
-      <h1>Contact</h1>
-      <p>A simple page for contact information and links.</p>
-      <h2>Links to add</h2>
-      <ul>
-        <li>Email</li><li>LinkedIn</li><li>GitHub</li><li>CV</li>
-      </ul>
-      <h2>Next steps</h2>
-      <p>Replace this placeholder text with your preferred contact information and links.</p>
-    </article>
+
+  <main class="page contact-page" id="top">
+    <a class="back-link" href="../index.html">← Back to home page</a>
+
+    <div class="page-with-toc">
+      <article class="page-card contact-card">
+        <p class="eyebrow">Contact</p>
+        <h1>Let’s connect.</h1>
+        <p class="page-intro">
+          I am always happy to hear from people working across quantum science, engineering, policy, education, and emerging technology evaluation.
+        </p>
+
+        <section class="policy-section" id="reach-out">
+          <p class="section-label">Reach out</p>
+          <h2>For research, collaboration, or conversation</h2>
+          <p>
+            The best way to reach me is by email. You can also find my technical work and selected projects online.
+          </p>
+
+          <div class="contact-grid">
+            <a class="contact-tile" href="mailto:carlottab@mit.edu">
+              <span class="contact-kicker">Email</span>
+              <strong>firstname_lastinitial1_mac@mit.edu</strong>
+              <span>Reach out for research collaborations or general inquirie!.</span>
+            </a>
+
+            <a class="contact-tile" href="https://www.linkedin.com/in/carlotta-barone-macdonald/" target="_blank" rel="noopener">
+              <span class="contact-kicker">LinkedIn</span>
+              <strong>LinkedIn profile</strong>
+              <span>Please connect with me on LinkedIn!</span>
+            </a>
+
+            <a class="contact-tile" href="https://github.com/CarlottaBM" target="_blank" rel="noopener">
+              <span class="contact-kicker">GitHub</span>
+              <strong>@CarlottaBM</strong>
+              <span>Check out some of my code, coursework, and website source files.</span>
+            </a>
+
+            <a class="contact-tile" href="../media/CV.pdf">
+              <span class="contact-kicker">CV</span>
+              <strong>Download CV</strong>
+            </a>
+          </div>
+        </section>
+
+        <!-- <section class="policy-section" id="interests">
+          <p class="section-label">Topics</p>
+          <h2>Areas I am especially interested in discussing</h2>
+          <ul class="contact-list">
+            <li>Quantum information science and resource theories</li>
+            <li>Experimental quantum systems, hardware constraints, and measurement</li>
+            <li>Quantum-adjacent energy applications and evidence standards</li>
+            <li>Science policy, field building, funding, and responsible innovation</li>
+            <li>Teaching, outreach, and making quantum ideas more accessible</li>
+          </ul>
+        </section> -->
+      </article>
+
+      <aside class="page-toc" aria-label="Page contents">
+        <p class="toc-title">Contents</p>
+        <nav class="toc-links">
+          <a href="#reach-out">Reach out</a>
+          <!-- <a href="#interests">Topics</a> -->
+          <a class="toc-back" href="../index.html">← Back to home</a>
+        </nav>
+      </aside>
+    </div>
   </main>
 </body>
 </html>

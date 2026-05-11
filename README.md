@@ -1,23 +1,16 @@
-# Carlotta Barone MacDonald — Research Portfolio
+# CarlottaBM.github.io
 
-Static GitHub Pages website for a personal research portfolio organized around an interactive atom model.
+Personal website for Carlotta Barone MacDonald.
 
 ## Structure
 
-- `index.html` — homepage with interactive atom model
-- `assets/styles.css` — site styling
-- `assets/script.js` — homepage atom interactions and dynamic theme behavior
-- `pages/` — individual research, about, and contact pages
-- `media/` — images, figures, PDFs, and other files to add later
-- `.nojekyll` — tells GitHub Pages to serve files directly
+- `index.html` — home page with the interactive research atom
+- `pages/` — About, Contact, and research direction pages
+- `assets/` — CSS and JavaScript
+- `media/` — images, CV, and other media files
 
-## Local editing
+## Notes
 
-Open `index.html` in a browser, or use VS Code Live Server.
-
-## GitHub Pages
-
-Push the contents of this folder to the root of the `CarlottaBM.github.io` repository.
-
-
-The About page uses images from `media/`: a static headshot plus a scrolling photo strip.
+- To update the CV link, place the file at `media/CV.pdf` or edit the link in `pages/contact.html`.
+- To update contact links, edit `pages/contact.html`.
+- The research dropdown is defined in each page header.
