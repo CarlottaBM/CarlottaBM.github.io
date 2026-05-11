@@ -1,44 +1,38 @@
-# CarlottaBM.github.io
+# Carlotta Barone MacDonald — Personal Research Website
 
-Personal website for Carlotta Barone MacDonald.
+Static GitHub Pages website for a research portfolio organized around an interactive atom model.
 
 ## Structure
 
-- `index.html` — homepage with the interactive research atom
-- `assets/styles.css` — site styling
-- `assets/script.js` — homepage interaction logic
-- `pages/` — individual research direction pages
-- `media/` — place images, figures, PDFs, and other media here
-
-## Editing the homepage research directions
-
-The five homepage electrons are defined in two places:
-
-1. `index.html` controls the visible electron buttons.
-2. `assets/script.js` controls the text, project previews, and page links that appear when each electron is clicked.
-
-The current research directions are:
-
-- Quantum Information Science
-- Experimental Quantum Systems
-- Exploring Energy Applications
-- Outreach and Education
-- Science Policy and Field Building
-
-## Adding images
-
-Put images in the `media/` folder, then reference them from pages using paths like:
-
-```html
-<img src="../media/example-image.jpg" alt="Description of image">
+```text
+.
+├── index.html
+├── assets/
+│   ├── styles.css
+│   └── script.js
+├── pages/
+│   ├── quantum-information.html
+│   ├── quantum-hardware.html
+│   ├── quantum-energy.html
+│   ├── outreach-education.html
+│   ├── science-policy.html
+│   └── contact.html
+├── media/
+│   └── .gitkeep
+└── .nojekyll
 ```
 
-From the homepage, use:
+## Editing content
 
-```html
-<img src="media/example-image.jpg" alt="Description of image">
-```
+- Edit the homepage text and electron labels in `index.html`.
+- Edit the homepage interaction panel in `assets/script.js`.
+- Edit each research direction page in `pages/`.
+- Add images, figures, PDFs, or screenshots to `media/`, then reference them from a page with paths like `../media/my-image.png`.
 
-## Deploying on GitHub Pages
+## Research navigation
 
-Push these files to the root of the GitHub Pages repository. GitHub Pages should serve `index.html` automatically.
+The top navigation includes a Research dropdown linking to the five main research pages. Each research page also includes a right-side table of contents on desktop, which collapses near the top of the page on smaller screens.
+
+## Publishing on GitHub Pages
+
+Push these files to the root of your `CarlottaBM.github.io` repository. GitHub Pages should serve the site directly from `index.html`.
