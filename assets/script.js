@@ -7,25 +7,25 @@ const directions = {
   },
   "experimental-systems": {
     title: "Experimental Quantum Systems",
-    text: "Connecting quantum behavior to devices, controls, measurements, and laboratory platforms.",
+    text: "Understanding and implementing quantum devices, controls, measurements, and laboratory platforms.",
     link: "pages/quantum-hardware.html",
     projects: []
   },
   "quantum-energy": {
     title: "Exploring Energy Applications",
-    text: "Exploring quantum-adjacent energy questions through experimental validation, detector design, and careful evidence assessment.",
+    text: "Exploring how quantum technologies can be applied to energy systems.",
     link: "pages/quantum-energy.html",
     projects: []
   },
   "outreach-education": {
     title: "Outreach and Education",
-    text: "Building bridges between technical quantum work, public understanding, workforce development, and student communities.",
+    text: "Sharing science with all, getting people engaged with quantum!",
     link: "pages/outreach-education.html",
     projects: ["iQuHACK"]
   },
   "science-policy": {
     title: "Science Policy and Field Building",
-    text: "Studying how emerging fields gain credibility, attract funding, and develop institutions that can support responsible innovation.",
+    text: "Studying how emerging fields gain credibility, attract funding, and develop institutions that can support impactful innovation.",
     link: "pages/science-policy.html",
     projects: ["Field building"]
   }
