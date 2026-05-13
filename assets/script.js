@@ -3,7 +3,7 @@ const directions = {
     title: "Quantum Information Science",
     text: "Studying the resources, limits, and algorithms that make quantum systems useful for computation and simulation.",
     link: "pages/quantum-information.html",
-    projects: ["Stabilizer entropies", "Quantum Annealing"]
+    projects: []
   },
   "experimental-systems": {
     title: "Experimental Quantum Systems",
@@ -27,7 +27,7 @@ const directions = {
     title: "Science Policy and Field Building",
     text: "Studying how emerging fields gain credibility, attract funding, and develop institutions that can support impactful innovation.",
     link: "pages/science-policy.html",
-    projects: ["Field building"]
+    projects: []
   }
 };
 
