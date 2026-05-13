@@ -3,7 +3,7 @@ const directions = {
     title: "Quantum Information Science",
     text: "Studying the resources, limits, and algorithms that make quantum systems useful for computation and simulation.",
     link: "pages/quantum-information.html",
-    projects: ["Stabilizer entropies", "Quantum algorithms", "Quantum walks", "Simulation limits"]
+    projects: ["Stabilizer entropies", "Quantum Annealing"]
   },
   "experimental-systems": {
     title: "Experimental Quantum Systems",
