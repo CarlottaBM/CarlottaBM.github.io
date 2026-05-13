@@ -9,25 +9,25 @@ const directions = {
     title: "Experimental Quantum Systems",
     text: "Connecting quantum behavior to devices, controls, measurements, and laboratory platforms.",
     link: "pages/quantum-hardware.html",
-    projects: ["Superconducting qubits", "NV centers", "Quantum optics labs", "Measurement and calibration"]
+    projects: []
   },
   "quantum-energy": {
     title: "Exploring Energy Applications",
     text: "Exploring quantum-adjacent energy questions through experimental validation, detector design, and careful evidence assessment.",
     link: "pages/quantum-energy.html",
-    projects: ["LENR validation", "Metal-hydrogen systems", "Detector pipelines", "Background analysis"]
+    projects: []
   },
   "outreach-education": {
     title: "Outreach and Education",
     text: "Building bridges between technical quantum work, public understanding, workforce development, and student communities.",
     link: "pages/outreach-education.html",
-    projects: ["Quantum hackathons", "Workforce development", "STEM outreach", "Public communication"]
+    projects: ["iQuHACK"]
   },
   "science-policy": {
     title: "Science Policy and Field Building",
     text: "Studying how emerging fields gain credibility, attract funding, and develop institutions that can support responsible innovation.",
     link: "pages/science-policy.html",
-    projects: ["Field building", "Public funding", "Technology roadmaps", "Responsible innovation"]
+    projects: ["Field building"]
   }
 };
 
