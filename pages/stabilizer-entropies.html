@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stabilizer Entropies | Carlotta Barone MacDonald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body data-active="quantum-information">
+<header class="site-header">
+  <a class="brand" href="../index.html">Carlotta Barone MacDonald</a>
+  <nav aria-label="Main navigation">
+    <a href="about.html">About</a>
+    <div class="nav-dropdown">
+      <a class="nav-trigger" href="../index.html#portfolio">Research</a>
+      <div class="nav-menu" aria-label="Research pages">
+        <a href="quantum-information.html">Quantum Information</a>
+        <a href="quantum-hardware.html">Experimental Quantum Systems</a>
+        <a href="quantum-energy.html">Exploring Energy Applications</a>
+        <a href="outreach-education.html">Outreach and Education</a>
+        <a href="science-policy.html">Science Policy and Field Building</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page" id="top">
+  <a class="back-link" href="quantum-information.html">← Back to Quantum Information</a>
+
+  <div class="page-with-toc">
+    <article class="page-card stabilizer-page">
+      <p class="eyebrow">Resource theory · magic · stabilizer entropy</p>
+      <h1>Resource Theory and Stabilizer Entropies</h1>
+
+      <section id="overview">
+        <p class="lede">
+          This project explored how to quantify non-stabilizerness, or “magic,” as a
+          resource for quantum computation. It grew out of a broader question in quantum
+          information science: if not every quantum system gives an advantage, how do we
+          identify and measure the resources that make some quantum systems powerful?
+        </p>
+
+        <p>
+          I worked on this project during my undergraduate research at Imperial College
+          London with Soovin Lee in Professor Myungshik Kim’s group. The project focused
+          on stabilizer Rényi entropy as a measure of magic, and on efficient algorithms
+          for estimating this quantity without explicitly summing over exponentially many
+          Pauli operators.
+        </p>
+      </section>
+
+      <section id="motivation">
+        <h2>Motivation: what is quantum advantage?</h2>
+
+        <p>
+          A quantum computer is not powerful simply because it is quantum. The
+          Gottesman–Knill theorem shows that circuits made only of stabilizer states,
+          Clifford operations, and Pauli measurements can be simulated efficiently on a
+          classical computer. This gives a clear example of the boundary between quantum
+          behavior and useful quantum advantage.
+        </p>
+
+        <p>
+          To go beyond this classically tractable regime, quantum computation needs
+          non-stabilizer resources. These resources are often called magic. Stabilizer
+          entropy gives a way to quantify how much a state departs from stabilizer
+          structure.
+        </p>
+      </section>
+
+      <section id="figures">
+        <h2>Grover’s algorithm as a case study</h2>
+
+        <p>
+          I used Grover’s algorithm as a case study because it has a clear structure:
+          an oracle marks the target state, and a diffusion operator amplifies the marked
+          state. This makes it a useful setting for asking how magic is generated,
+          transformed, and reshaped during a computation.
+        </p>
+
+        <figure class="wide-figure">
+          <img src="../media/grover_search.png" alt="Diagram explaining Grover search">
+          <figcaption>
+            Grover search provides a clean example of quantum speedup: the algorithm
+            searches an unsorted database using amplitude amplification.
+          </figcaption>
+        </figure>
+
+        <figure class="wide-figure">
+          <img src="../media/grover_circuit.png" alt="Circuit diagram for Grover's algorithm">
+          <figcaption>
+            Circuit structure of Grover’s algorithm. The oracle marks the target state,
+            while the diffusion operator amplifies it through repeated reflections.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="technical-idea">
+        <h2>Technical idea</h2>
+
+        <p>
+          Stabilizer Rényi entropy is built from the expectation values of Pauli
+          operators. A stabilizer-like state has a concentrated distribution over Pauli
+          operators, while a non-stabilizer state has a more spread-out distribution.
+          Entropy provides a way to quantify that spread.
+        </p>
+
+        <div class="formula-card">
+          <p class="formula">
+            M<sub>α</sub>(ψ) =
+            <span class="frac">1 / (1 − α)</span>
+            log[
+            <span class="frac">1 / 2<sup>n</sup></span>
+            Σ<sub>σ∈P<sub>n</sub></sub>
+            |⟨ψ|σ|ψ⟩|<sup>2α</sup>
+            ]
+          </p>
+        </div>
+
+        <p>
+          The challenge is that the number of Pauli strings grows as 4<sup>n</sup>.
+          Direct computation is therefore exponentially expensive. The efficient
+          estimation approach rewrites the quantity as an expectation value over
+          multiple copies of the state, allowing it to be estimated through Bell
+          measurements and classical post-processing.
+        </p>
+      </section>
+
+      <section id="takeaway">
+        <h2>Takeaway</h2>
+
+        <p>
+          This project shaped how I think about quantum advantage. Rather than treating
+          advantage as a yes-or-no property, resource theory lets us ask what resource is
+          present, how much of it exists, how it evolves during a computation, and whether
+          it can be accessed experimentally.
+        </p>
+
+        <p>
+          It also connects to a broader research direction I want to pursue: comparing
+          quantum systems with classical analogues to understand what makes a system
+          genuinely quantum, and where classical simulation stops being efficient.
+        </p>
+      </section>
+
+      <section id="references">
+        <h2>References and links</h2>
+
+        <ul class="reference-list">
+          <li>
+            <a href="https://doi.org/10.1103/PhysRevLett.128.050402" target="_blank" rel="noopener">
+              Leone, Oliviero, and Hamma, “Stabilizer Rényi Entropy,” Physical Review Letters, 2022.
+            </a>
+          </li>
+          <li>
+            <a href="https://doi.org/10.1103/PhysRevLett.132.240602" target="_blank" rel="noopener">
+              Haug, Lee, and Kim, “Efficient Quantum Algorithms for Stabilizer Entropies,” Physical Review Letters, 2024.
+            </a>
+          </li>
+          <li>
+            <a href="https://doi.org/10.1103/PRXQuantum.4.010301" target="_blank" rel="noopener">
+              Haug and Kim, “Scalable Measures of Magic Resource for Quantum Computers,” PRX Quantum, 2023.
+            </a>
+          </li>
+          <li>
+            <a href="https://doi.org/10.1038/s41534-022-00666-5" target="_blank" rel="noopener">
+              Oliviero, Leone, Hamma, and Lloyd, “Measuring Magic on a Quantum Processor,” npj Quantum Information, 2022.
+            </a>
+          </li>
+          <li>
+            <a href="https://profiles.imperial.ac.uk/m.kim" target="_blank" rel="noopener">
+              Professor Myungshik Kim, Imperial College London.
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <aside class="page-toc" aria-label="Page contents">
+      <p class="toc-title">Contents</p>
+      <nav class="toc-links">
+        <a href="#top">Overview</a>
+        <a href="#motivation">Motivation</a>
+        <a href="#figures">Grover case study</a>
+        <a href="#technical-idea">Technical idea</a>
+        <a href="#takeaway">Takeaway</a>
+        <a href="#references">References</a>
+        <a class="toc-back" href="quantum-information.html">← Back to QIS</a>
+      </nav>
+    </aside>
+  </div>
+</main>
+</body>
+</html>
