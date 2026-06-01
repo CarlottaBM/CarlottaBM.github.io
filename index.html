@@ -3,20 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Carlotta Barone MacDonald</title>
-  <meta name="description" content="Research portfolio organized as an interactive atom model." />
+
+  <title>Carlotta Barone-MacDonald</title>
+
+  <meta
+    name="description"
+    content="Personal research website for Carlotta Barone-MacDonald, focused on quantum information, experimental quantum systems, and emerging science."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Carlotta Barone MacDonald</a>
+    <a class="brand" href="index.html">Carlotta Barone-MacDonald</a>
+
     <nav aria-label="Main navigation">
-      <a href="pages/about.html">About</a>
+      <a href="#about">About</a>
+
       <div class="nav-dropdown">
         <a class="nav-trigger" href="#portfolio">Research</a>
+
         <div class="nav-menu" aria-label="Research pages">
           <a href="pages/quantum-information.html">Quantum Information Science</a>
           <a href="pages/quantum-hardware.html">Experimental Quantum Systems</a>
@@ -25,17 +39,58 @@
           <a href="pages/science-policy.html">Science Policy and Field Building</a>
         </div>
       </div>
+
+      <!-- <a href="#updates">Updates</a> -->
       <a href="pages/contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="portfolio">
-      <p class="eyebrow">My Research Trajectory</p>
-      <h1>From observing quantum effects to solving real-world problems.</h1>
-      <p class="subtitle">Click a research direction to reveal more about it. Use the explore button to open the full page.</p>
+    <!-- 1. HERO / INTRO -->
+    <section class="home-hero">
+      <!-- <p class="eyebrow">MIT EECS + Technology and Policy</p> -->
 
-      <div class="atom-layout" aria-label="Interactive research atom">
+      <h1 class="hero-title">Carlotta Barone-MacDonald</h1>
+
+      <h2 class="hero-question">
+        What will it take for quantum computation to become a useful tool for understanding nature?
+      </h2>
+
+      <p class="hero-blurb">
+        I was drawn to quantum mechanics because it offers an elegant, counterintuitive, and philosophically strange description of nature. What now motivates me is the possibility that quantum systems could help us model, simulate, and reason about physical systems in ways that are difficult or impossible classically. <span class="hero-highlight">My work asks what stands between that promise and practical quantum technologies.</span> I explore the technical and institutional bottlenecks that shape progress: from algorithms, hardware, and problem selection to validation, funding, and field-building.
+      </p>
+
+      <p class="hero-note">
+        This website is an attempt at collecting the questions, projects and research directions shaping my work. Please explore at your leisure, and feel free to reach out if you want to chat about any of it!
+      </p>
+
+      <!--
+      <div class="hero-actions">
+        <a class="button" href="#portfolio">Explore my research</a>
+        <a class="text-link" href="pages/contact.html">Contact me →</a>
+      </div>
+      -->
+    </section>
+
+    <!-- 2. RESEARCH INTRO -->
+    <!--
+    <section class="research-intro" id="portfolio">
+      <p class="eyebrow">Research directions</p>
+
+      <h2>Zoom into my research map</h2>
+
+      <p>
+        My interests orbit around one central question:
+        <strong>how do emerging quantum technologies become useful?</strong>
+        The map below connects the directions I am currently exploring across quantum
+        information, experimental systems, quantum energy, outreach, and science policy.
+      </p>
+    </section>
+    -->
+
+    <!-- 3. ATOM / RESEARCH MAP -->
+    <section class="research-map" aria-label="Interactive research atom">
+      <div class="atom-layout">
         <section class="atom-card" aria-label="Research atom visualization">
           <div class="atom-stage" id="atomStage">
             <svg class="orbit-svg" viewBox="0 0 700 700" aria-hidden="true">
@@ -45,25 +100,29 @@
             </svg>
 
             <div class="nucleus">
-              <span>How can we go from observing quantum effects on the bench to solving real-world problems?</span>
+              <span>How can quantum computation help us understand nature?</span>
             </div>
 
             <button class="electron is-active" type="button" data-direction="quantum-information" aria-pressed="true">
-              <span>Quantum<br>Information<br>Science</span>
+              <span>Quantum<br>Information<br>& Resources</span>
               <small class="electron-action">Explore</small>
             </button>
-            <button class="electron" type="button" data-direction="experimental-systems" aria-pressed="false">
-              <span>Experimental<br>Quantum<br>Systems</span>
+
+            <button class="electron" type="button" data-direction="quantum-analog-simulation" aria-pressed="false">
+              <span>Quantum &<br>Analogue Simulation</span>
               <small class="electron-action">Explore</small>
             </button>
-            <button class="electron" type="button" data-direction="quantum-energy" aria-pressed="false">
-              <span>Exploring<br>Energy<br>Applications</span>
+
+            <button class="electron" type="button" data-direction="data-driven-analysis" aria-pressed="false">
+              <span>Data driven<br>Experimental Analysis</span>
               <small class="electron-action">Explore</small>
             </button>
-            <button class="electron" type="button" data-direction="outreach-education" aria-pressed="false">
-              <span>Outreach<br>and<br>Education</span>
+
+            <button class="electron" type="button" data-direction="scientific-computing-ml" aria-pressed="false">
+              <span>Scientific Computing<br>and<br>ML</span>
               <small class="electron-action">Explore</small>
             </button>
+
             <button class="electron" type="button" data-direction="science-policy" aria-pressed="false">
               <span>Science Policy<br>and Field<br>Building</span>
               <small class="electron-action">Explore</small>
@@ -73,21 +132,89 @@
 
         <aside class="detail-card" aria-live="polite">
           <p class="eyebrow">Research direction</p>
+
           <h2 id="directionTitle">Quantum Information Science</h2>
-          <p id="directionText">Studying the resources, limits, and algorithms that make quantum systems useful for computation and simulation.</p>
-          <div class="project-constellation" id="projectConstellation" aria-label="Projects in this research direction"></div>
-          <a class="button" id="directionLink" href="pages/quantum-information.html">Explore Quantum Information Science</a>
+
+          <p id="directionText">
+            Studying the resources, limits, and algorithms that make quantum systems useful
+            for computation and simulation.
+          </p>
+
+
+          <a class="button" id="directionLink" href="pages/quantum-information.html">
+            Explore Quantum Information Science
+          </a>
         </aside>
       </div>
     </section>
 
-    <section class="about-card" id="about">
-      <p class="eyebrow">About</p>
-      <h2>Research at the boundary between quantum systems, engineering, and policy.</h2>
-      <p>
-        I work at the intersection of quantum science, engineering, and policy to understand how emerging technologies are evaluated, funded, and built.
-      </p>
-      <a class="text-link" href="pages/about.html">Read more about me →</a>
+    <!-- 4. ABOUT ME -->
+    <section class="about-home" id="about">
+      <div class="about-image-wrap">
+        <!-- Replace assets/headshot.jpg with the actual file name of your headshot -->
+        <img
+          src="media/carlotta-headshot.jpeg"
+          alt="Portrait of Carlotta Barone-MacDonald"
+          class="about-headshot"
+        >
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow">About me</p>
+
+        <h2>a little about me</h2>
+
+        <p>
+          Hi there! I’m Carlotta Barone-MacDonald, a master’s student at MIT pursuing a dual degree in Technology & Policy and Electrical Engineering & Computer Science, with a background in mathematics and physics from École Polytechnique in France.
+        </p>
+
+        <p>
+          My path has moved between theory, experiment, and science policy. I have worked on
+          quantum information science, quantum resources, experimental systems, and questions
+          about how emerging scientific fields gain credibility.
+        </p>
+
+        <p>
+          I am especially interested in research that combines mathematical modeling,
+          hands-on systems, and a broader understanding of how technologies become useful
+          in the world.
+        </p>
+
+        <a class="text-link" href="pages/about.html">Read more about me →</a>
+      </div>
+    </section>
+
+    <!-- 5. RECENT UPDATES -->
+    <section class="updates-section" id="updates">
+      <p class="eyebrow">Recent updates</p>
+
+      <h2>Currently</h2>
+
+      <div class="updates-list">
+        <article class="update-item">
+          <span class="update-date">May 2026</span>
+          <p>
+            Revising my research direction toward quantum simulation, experimental quantum
+            systems, and the classical–quantum interface.
+          </p>
+        </article>
+
+        <article class="update-item">
+          <span class="update-date">Spring 2026</span>
+          <p>
+            Exploring research and internship opportunities at the intersection of quantum
+            technology, technical strategy, and experimental systems.
+          </p>
+        </article>
+
+        <article class="update-item">
+          <span class="update-date">2025–2026</span>
+          <p>
+            Continuing research at MIT on experimental validation, emerging scientific fields,
+            and the development of credible technical milestones.
+          </p>
+        </article>
+      </div>
     </section>
   </main>
 
