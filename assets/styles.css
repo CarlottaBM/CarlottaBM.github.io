@@ -1533,3 +1533,91 @@ body[data-active="science-policy"] {
     width: auto;
   }
 }
+
+.updates-by-year {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.updates-year {
+  border-top: 1px solid var(--border-color, #ddd);
+  padding-top: 1rem;
+}
+
+.updates-year summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.updates-year summary::-webkit-details-marker {
+  display: none;
+}
+
+.updates-year summary::after {
+  content: "+";
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.updates-year[open] summary::after {
+  content: "–";
+}
+
+.updates-year .update-item {
+  margin-top: 1rem;
+}
+
+.update-item {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.update-date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.update-item p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .update-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+.updates-section a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.28);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.2s ease, text-underline-offset 0.2s ease;
+}
+
+.updates-section a:hover,
+.updates-section a:focus-visible {
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.28em;
+}
+
+.updates-section a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+
