@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Source+Serif+4:wght@600;700&amp;display=swap"
     rel="stylesheet"
   >
 
@@ -26,7 +26,7 @@
     <a class="brand" href="index.html">Carlotta Barone-MacDonald</a>
 
     <nav aria-label="Main navigation">
-      <a href="#about">About</a>
+      <a href="pages/about.html">About</a>
 
       <div class="nav-dropdown">
         <a class="nav-trigger" href="#portfolio">Research</a>
@@ -48,28 +48,30 @@
   <main>
     <!-- 1. HERO / INTRO -->
     <section class="home-hero">
-      <!-- <p class="eyebrow">MIT EECS + Technology and Policy</p> -->
+      <div class="home-bio">
+        <img
+          src="media/carlotta-headshot.jpeg"
+          alt="Portrait of Carlotta Barone-MacDonald"
+          class="hero-headshot"
+        >
 
-      <h1 class="hero-title">Carlotta Barone-MacDonald</h1>
+        <div class="home-bio-copy">
+          <h1 class="hero-title">Carlotta Barone-MacDonald</h1>
 
-      <h2 class="hero-question">
-        What will it take for quantum computation to become a useful tool for understanding nature?
-      </h2>
+          <p>
+            I’m a master’s student at MIT pursuing a dual degree in Technology &amp; Policy and Electrical Engineering &amp; Computer Science, with a background in mathematics and physics from École Polytechnique.
+          </p>
 
-      <p class="hero-blurb">
-        I was drawn to quantum mechanics because it offers an elegant, counterintuitive, and philosophically strange description of nature. What now motivates me is the possibility that quantum systems could help us model, simulate, and reason about physical systems in ways that are difficult or impossible classically. <span class="hero-highlight">My work asks what stands between that promise and practical quantum technologies.</span> I explore the technical and institutional bottlenecks that shape progress: from algorithms, hardware, and problem selection to validation, funding, and field-building.
-      </p>
+          <p>
+            I study what stands between the promise of quantum computation and its practical use. My work moves across quantum information, simulation, experimental analysis, scientific computing, and science policy.
+          </p>
 
-      <p class="hero-note">
-        This website is an attempt at collecting the questions, projects and research directions shaping my work. Please explore at your leisure, and feel free to reach out if you want to chat about any of it!
-      </p>
+          <p class="home-bio-links">
+            Learn more <a href="pages/about.html">about me</a>, explore my work below, or <a href="pages/contact.html">get in touch</a>.
+          </p>
+        </div>
 
-      <!--
-      <div class="hero-actions">
-        <a class="button" href="#portfolio">Explore my research</a>
-        <a class="text-link" href="pages/contact.html">Contact me →</a>
       </div>
-      -->
     </section>
 
     <!-- 2. RESEARCH INTRO -->
@@ -90,6 +92,11 @@
 
     <!-- 3. ATOM / RESEARCH MAP -->
     <section class="research-map" id="portfolio" aria-label="Interactive research atom">
+      <div class="research-prompt">
+        <h2>Want to explore my research and work?</h2>
+        <p>Select a direction in the atom below.</p>
+      </div>
+
       <div class="atom-layout">
         <section class="atom-card" aria-label="Research atom visualization">
           <div class="atom-stage" id="atomStage">
@@ -103,29 +110,24 @@
               <span>How can quantum computation help us understand nature?</span>
             </div>
 
-            <button class="electron is-active" type="button" data-direction="quantum-information" aria-pressed="true">
-              <span>Quantum<br>Information<br>& Resources</span>
-              <small class="electron-action">Explore</small>
+            <button class="electron is-active" type="button" data-direction="quantum-information" aria-label="Quantum Information and Resources" aria-pressed="true">
+              <span>Quantum<br>Information</span>
             </button>
 
-            <button class="electron" type="button" data-direction="quantum-analog-simulation" aria-pressed="false">
-              <span>Quantum &<br>Analogue Simulation</span>
-              <small class="electron-action">Explore</small>
+            <button class="electron" type="button" data-direction="quantum-analog-simulation" aria-label="Quantum and Analogue Simulation" aria-pressed="false">
+              <span>Quantum &amp;<br>Analogue Simulation</span>
             </button>
 
-            <button class="electron" type="button" data-direction="data-driven-analysis" aria-pressed="false">
-              <span>Data driven<br>Experimental Analysis</span>
-              <small class="electron-action">Explore</small>
+            <button class="electron" type="button" data-direction="data-driven-analysis" aria-label="Data-Driven Experimental Analysis" aria-pressed="false">
+              <span>Experimental<br>Analysis</span>
             </button>
 
-            <button class="electron" type="button" data-direction="scientific-computing-ml" aria-pressed="false">
-              <span>Scientific Computing<br>and<br>ML</span>
-              <small class="electron-action">Explore</small>
+            <button class="electron" type="button" data-direction="scientific-computing-ml" aria-label="Scientific Computing and Machine Learning" aria-pressed="false">
+              <span>Scientific<br>Computing &amp; ML</span>
             </button>
 
-            <button class="electron" type="button" data-direction="science-policy" aria-pressed="false">
-              <span>Science Policy<br>and Field<br>Building</span>
-              <small class="electron-action">Explore</small>
+            <button class="electron" type="button" data-direction="science-policy" aria-label="Science Policy and Field Building" aria-pressed="false">
+              <span>Science Policy<br>&amp; Field Building</span>
             </button>
           </div>
         </section>
@@ -145,42 +147,6 @@
             Explore Quantum Information &amp; Resources
           </a>
         </aside>
-      </div>
-    </section>
-
-    <!-- 4. ABOUT ME -->
-    <section class="about-home" id="about">
-      <div class="about-image-wrap">
-        <!-- Replace assets/headshot.jpg with the actual file name of your headshot -->
-        <img
-          src="media/carlotta-headshot.jpeg"
-          alt="Portrait of Carlotta Barone-MacDonald"
-          class="about-headshot"
-        >
-      </div>
-
-      <div class="about-copy">
-        <p class="eyebrow">About me</p>
-
-        <h2>a little about me</h2>
-
-        <p>
-          Hi there! I’m Carlotta Barone-MacDonald, a master’s student at MIT pursuing a dual degree in Technology & Policy and Electrical Engineering & Computer Science, with a background in mathematics and physics from École Polytechnique in France.
-        </p>
-
-        <p>
-          My path has moved between theory, experiment, and science policy. I have worked on
-          quantum information science, quantum resources, experimental systems, and questions
-          about how emerging scientific fields gain credibility.
-        </p>
-
-        <p>
-          I am especially interested in research that combines mathematical modeling,
-          hands-on systems, and a broader understanding of how technologies become useful
-          in the world.
-        </p>
-
-        <a class="text-link" href="pages/about.html">Read more about me →</a>
       </div>
     </section>
 
@@ -264,7 +230,7 @@
           <article class="update-item">
             <span class="update-date">March</span>
             <p>
-                <Param></Param>Published
+                Published
               <a href="https://themobilecentury.com/digital-humanism/a-digital-humanism-perspective-on-quantum-technologies-by-humans-and-for-humans/" target="_blank" rel="noopener">
                 an essay on quantum technologies and digital humanism
               </a>
@@ -347,6 +313,15 @@
         </details>
 
       </div>
+    </section>
+
+    <section class="about-prompt" aria-labelledby="aboutPromptTitle" hidden>
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 id="aboutPromptTitle">More about me</h2>
+        <p>My path across physics, computation, experiments, and policy.</p>
+      </div>
+      <a class="text-link" href="pages/about.html">Read my story →</a>
     </section>
 
 
