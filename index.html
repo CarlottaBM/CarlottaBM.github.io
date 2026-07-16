@@ -166,6 +166,27 @@
               Building team to complete global quantum challenge 2026! Reach out if that sounds like a fun project to work on together! 
             </p>
           </article>
+          <article class="update-item update-item-image-below">
+            <span class="update-date">July</span>
+            <p>
+              <em>Ladies Challenger</em> and her all-women team won CYC Regatta’s
+              Spring Series Championship!
+            </p>
+            <div class="update-gallery" aria-label="Photos of Ladies Challenger and her sailing team">
+              <img
+                class="update-gallery-image update-gallery-image-circle"
+                src="media/updates/mashnee-on-water.jpeg"
+                alt="Ladies Challenger sailing during the CYC Spring Series"
+                loading="lazy"
+              >
+              <img
+                class="update-gallery-image update-gallery-image-circle"
+                src="media/updates/ladies-challenger-team.jpeg"
+                alt="The Ladies Challenger sailing team standing aboard the boat"
+                loading="lazy"
+              >
+            </div>
+          </article>
           <article class="update-item">
             <span class="update-date">June</span>
             <p>
@@ -201,7 +222,7 @@
         <details class="updates-year">
           <summary>2025</summary>
 
-          <article class="update-item">
+          <article class="update-item update-item-image-below">
             <span class="update-date">Fall</span>
             <p>
               Took
@@ -210,13 +231,47 @@
               </a>,
               exploring rapid prototyping, fabrication, and the design of (almost) any system.
             </p>
+            <div class="update-gallery" aria-label="Photos from How to Make (Almost) Anything">
+              <img
+                class="update-gallery-image update-gallery-image-transparent"
+                src="media/updates/how-to-make-chair.png"
+                alt="A curved wooden chair made for How to Make (Almost) Anything"
+                loading="lazy"
+              >
+              <img
+                class="update-gallery-image update-gallery-image-contained"
+                src="media/updates/how-to-make-pcb.png"
+                alt="A custom circuit board made for How to Make (Almost) Anything"
+                loading="lazy"
+              >
+              <img
+                class="update-gallery-image update-gallery-image-contained"
+                src="media/updates/how-to-make-sundial.png"
+                alt="A sundial made for How to Make (Almost) Anything"
+                loading="lazy"
+              >
+            </div>
           </article>
 
-          <article class="update-item">
+          <article class="update-item update-item-image-below">
             <span class="update-date">Summer</span>
             <p>
               Attended the International Conference on Quantum Energy in Padua.
             </p>
+            <div class="update-gallery" aria-label="Photos from the International Conference on Quantum Energy">
+              <img
+                class="update-gallery-image update-gallery-image-circle"
+                src="media/updates/ICQE-crowd.png"
+                alt="Audience at the International Conference on Quantum Energy in Padua"
+                loading="lazy"
+              >
+              <img
+                class="update-gallery-image update-gallery-image-circle"
+                src="media/updates/ICQE-on-stage.png"
+                alt="Conference participants gathered on stage at ICQE in Padua"
+                loading="lazy"
+              >
+            </div>
           </article>
 
           <article class="update-item">
@@ -333,6 +388,16 @@
 
 
   </main>
+
+  <dialog class="image-lightbox" id="imageLightbox" aria-label="Expanded update photo">
+    <button class="image-lightbox-close" type="button" aria-label="Close expanded photo">×</button>
+    <div class="image-lightbox-stage">
+      <button class="image-lightbox-arrow image-lightbox-previous" type="button" aria-label="View previous photo">‹</button>
+      <img class="image-lightbox-photo" src="" alt="">
+      <button class="image-lightbox-arrow image-lightbox-next" type="button" aria-label="View next photo">›</button>
+    </div>
+    <p class="image-lightbox-subtitle"></p>
+  </dialog>
 
   <script src="assets/script.js"></script>
 </body>

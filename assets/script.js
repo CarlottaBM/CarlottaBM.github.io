@@ -61,3 +61,98 @@ buttons.forEach((button) => {
 });
 
 renderDirection("quantum-information");
+
+const galleryImages = document.querySelectorAll(".update-gallery-image");
+const lightbox = document.getElementById("imageLightbox");
+const lightboxPhoto = lightbox?.querySelector(".image-lightbox-photo");
+const lightboxClose = lightbox?.querySelector(".image-lightbox-close");
+const lightboxPrevious = lightbox?.querySelector(".image-lightbox-previous");
+const lightboxNext = lightbox?.querySelector(".image-lightbox-next");
+const lightboxSubtitle = lightbox?.querySelector(".image-lightbox-subtitle");
+let activeGalleryImages = [];
+let activeGalleryIndex = 0;
+
+function renderLightboxImage() {
+  if (!lightbox || !lightboxPhoto) return;
+
+  const image = activeGalleryImages[activeGalleryIndex];
+  if (!image) return;
+
+  lightboxPhoto.src = image.currentSrc || image.src;
+  lightboxPhoto.alt = image.alt;
+  const hasMultipleImages = activeGalleryImages.length > 1;
+  lightboxPrevious?.toggleAttribute("hidden", !hasMultipleImages);
+  lightboxNext?.toggleAttribute("hidden", !hasMultipleImages);
+}
+
+function openLightbox(image) {
+  if (!lightbox || !lightboxPhoto) return;
+
+  const gallery = image.closest(".update-gallery");
+  activeGalleryImages = gallery
+    ? Array.from(gallery.querySelectorAll(".update-gallery-image"))
+    : [image];
+  activeGalleryIndex = activeGalleryImages.indexOf(image);
+
+  const update = image.closest(".update-item");
+  const date = update?.querySelector(".update-date")?.textContent.trim();
+  const description = update?.querySelector("p")?.textContent.replace(/\s+/g, " ").trim();
+
+  if (lightboxSubtitle) {
+    lightboxSubtitle.textContent = [date, description].filter(Boolean).join(" — ");
+  }
+
+  renderLightboxImage();
+  lightbox.showModal();
+}
+
+function moveLightbox(direction) {
+  if (activeGalleryImages.length < 2) return;
+
+  activeGalleryIndex =
+    (activeGalleryIndex + direction + activeGalleryImages.length) %
+    activeGalleryImages.length;
+  renderLightboxImage();
+}
+
+galleryImages.forEach((image) => {
+  image.tabIndex = 0;
+  image.setAttribute("role", "button");
+  image.setAttribute("aria-label", `${image.alt}. Open larger image.`);
+
+  image.addEventListener("click", () => openLightbox(image));
+  image.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openLightbox(image);
+    }
+  });
+});
+
+lightboxClose?.addEventListener("click", () => lightbox.close());
+lightboxPrevious?.addEventListener("click", () => moveLightbox(-1));
+lightboxNext?.addEventListener("click", () => moveLightbox(1));
+
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    lightbox.close();
+  }
+});
+
+lightbox?.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    moveLightbox(-1);
+  }
+
+  if (event.key === "ArrowRight") {
+    moveLightbox(1);
+  }
+});
+
+lightbox?.addEventListener("close", () => {
+  if (!lightboxPhoto) return;
+  lightboxPhoto.src = "";
+  lightboxPhoto.alt = "";
+  activeGalleryImages = [];
+  activeGalleryIndex = 0;
+});
