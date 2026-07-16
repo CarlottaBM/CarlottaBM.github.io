@@ -7,13 +7,13 @@
   --line: #e5ded2;
   --border: #e5ded2;
 
-  --accent: #7c3aed;
-  --accent-soft: #f1eaff;
+  --accent: #2563eb;
+  --accent-soft: #eaf1ff;
 
-  --active-accent: #7c3aed;
-  --active-rgb: 124, 58, 237;
-  --active-soft: #f1eaff;
-  --active-line: #d9c8ff;
+  --active-accent: #2563eb;
+  --active-rgb: 37, 99, 235;
+  --active-soft: #eaf1ff;
+  --active-line: #bdd2ff;
 
   --shadow: 0 24px 70px rgba(31, 41, 55, 0.10);
   --radius: 28px;
@@ -191,8 +191,33 @@ nav a:focus-visible {
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
-  background: var(--active-soft);
-  color: var(--active-accent);
+  background: var(--menu-item-soft, var(--active-soft));
+  color: var(--menu-item-color, var(--active-accent));
+}
+
+.nav-menu a[href$="quantum-information.html"] {
+  --menu-item-color: #2563eb;
+  --menu-item-soft: #eaf1ff;
+}
+
+.nav-menu a[href$="quantum-analog-simulation.html"] {
+  --menu-item-color: #7c3aed;
+  --menu-item-soft: #f1eaff;
+}
+
+.nav-menu a[href$="data-driven-analysis.html"] {
+  --menu-item-color: #f97316;
+  --menu-item-soft: #fff2e8;
+}
+
+.nav-menu a[href$="scientific-computing-ml.html"] {
+  --menu-item-color: #db2777;
+  --menu-item-soft: #fce7f3;
+}
+
+.nav-menu a[href$="science-policy.html"] {
+  --menu-item-color: #059669;
+  --menu-item-soft: #e8f8f1;
 }
 
 /* ----------------------------- */
@@ -391,13 +416,13 @@ nav a:focus-visible {
 /* Direction colors */
 
 .electron[data-direction="quantum-information"] {
-  --direction-color: #7c3aed;
-  --direction-soft: #f1eaff;
+  --direction-color: #2563eb;
+  --direction-soft: #eaf1ff;
 }
 
 .electron[data-direction="quantum-analog-simulation"] {
-  --direction-color: #2563eb;
-  --direction-soft: #eaf1ff;
+  --direction-color: #7c3aed;
+  --direction-soft: #f1eaff;
 }
 
 .electron[data-direction="data-driven-analysis"] {
@@ -418,17 +443,17 @@ nav a:focus-visible {
 /* Active state colors */
 
 body[data-active="quantum-information"] {
-  --active-accent: #7c3aed;
-  --active-rgb: 124, 58, 237;
-  --active-soft: #f1eaff;
-  --active-line: #d9c8ff;
-}
-
-body[data-active="quantum-analog-simulation"] {
   --active-accent: #2563eb;
   --active-rgb: 37, 99, 235;
   --active-soft: #eaf1ff;
   --active-line: #bdd2ff;
+}
+
+body[data-active="quantum-analog-simulation"] {
+  --active-accent: #7c3aed;
+  --active-rgb: 124, 58, 237;
+  --active-soft: #f1eaff;
+  --active-line: #d9c8ff;
 }
 
 body[data-active="data-driven-analysis"] {
@@ -1641,8 +1666,8 @@ body {
   transition: color 300ms ease;
 }
 
-body[data-active="quantum-information"] { --page-tint: #faf8ff; }
-body[data-active="quantum-analog-simulation"] { --page-tint: #f7f9ff; }
+body[data-active="quantum-information"] { --page-tint: #f7f9ff; }
+body[data-active="quantum-analog-simulation"] { --page-tint: #faf8ff; }
 body[data-active="data-driven-analysis"] { --page-tint: #fff9f4; }
 body[data-active="scientific-computing-ml"] { --page-tint: #fff7fb; }
 body[data-active="science-policy"] { --page-tint: #f5fbf8; }
