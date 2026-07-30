@@ -80,6 +80,9 @@ function renderLightboxImage() {
 
   lightboxPhoto.src = image.currentSrc || image.src;
   lightboxPhoto.alt = image.alt;
+  if (lightboxSubtitle) {
+    lightboxSubtitle.textContent = image.alt;
+  }
   const hasMultipleImages = activeGalleryImages.length > 1;
   lightboxPrevious?.toggleAttribute("hidden", !hasMultipleImages);
   lightboxNext?.toggleAttribute("hidden", !hasMultipleImages);
@@ -93,14 +96,6 @@ function openLightbox(image) {
     ? Array.from(gallery.querySelectorAll(".update-gallery-image"))
     : [image];
   activeGalleryIndex = activeGalleryImages.indexOf(image);
-
-  const update = image.closest(".update-item");
-  const date = update?.querySelector(".update-date")?.textContent.trim();
-  const description = update?.querySelector("p")?.textContent.replace(/\s+/g, " ").trim();
-
-  if (lightboxSubtitle) {
-    lightboxSubtitle.textContent = [date, description].filter(Boolean).join(" — ");
-  }
 
   renderLightboxImage();
   lightbox.showModal();
