@@ -2814,16 +2814,21 @@ nav {
 }
 
 .personal-page .about-hero {
-  grid-template-columns: minmax(0, 1fr) 190px;
-  gap: clamp(32px, 7vw, 64px);
-  align-items: start;
+  display: block;
   margin: 0;
 }
 
+.personal-page .about-hero::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .personal-page .headshot-frame {
+  float: right;
   width: 190px;
   aspect-ratio: 1;
-  margin: 0;
+  margin: 0 0 18px clamp(32px, 7vw, 64px);
   border: 0;
   border-radius: 50%;
   box-shadow: none;
@@ -3014,12 +3019,12 @@ nav {
   }
 
   .personal-page .about-hero {
-    grid-template-columns: minmax(0, 1fr) 112px;
-    gap: 18px;
+    display: block;
   }
 
   .personal-page .headshot-frame {
     width: 112px;
+    margin: 0 0 14px 18px;
   }
 
   .personal-page .photo-carousel {
