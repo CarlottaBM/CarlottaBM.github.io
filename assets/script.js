@@ -38,7 +38,7 @@ const link = document.getElementById("directionLink");
 
 function renderDirection(key) {
   const direction = directions[key];
-  if (!direction) return;
+  if (!direction || !title || !text || !link) return;
 
   document.body.dataset.active = key;
 
@@ -60,9 +60,13 @@ buttons.forEach((button) => {
   });
 });
 
-renderDirection("quantum-information");
+if (buttons.length && title && text && link) {
+  renderDirection("quantum-information");
+}
 
-const galleryImages = document.querySelectorAll(".update-gallery-image");
+const galleryImages = document.querySelectorAll(
+  ".update-gallery-image, .about-gallery-image"
+);
 const lightbox = document.getElementById("imageLightbox");
 const lightboxPhoto = lightbox?.querySelector(".image-lightbox-photo");
 const lightboxClose = lightbox?.querySelector(".image-lightbox-close");
@@ -81,7 +85,8 @@ function renderLightboxImage() {
   lightboxPhoto.src = image.currentSrc || image.src;
   lightboxPhoto.alt = image.alt;
   if (lightboxSubtitle) {
-    lightboxSubtitle.textContent = image.alt;
+    const caption = image.closest("figure")?.querySelector("figcaption");
+    lightboxSubtitle.textContent = caption?.textContent.trim() || image.alt;
   }
   const hasMultipleImages = activeGalleryImages.length > 1;
   lightboxPrevious?.toggleAttribute("hidden", !hasMultipleImages);
@@ -91,9 +96,11 @@ function renderLightboxImage() {
 function openLightbox(image) {
   if (!lightbox || !lightboxPhoto) return;
 
-  const gallery = image.closest(".update-gallery");
+  const gallery = image.closest(".update-gallery, .about-gallery");
   activeGalleryImages = gallery
-    ? Array.from(gallery.querySelectorAll(".update-gallery-image"))
+    ? Array.from(
+        gallery.querySelectorAll(".update-gallery-image, .about-gallery-image")
+      )
     : [image];
   activeGalleryIndex = activeGalleryImages.indexOf(image);
 
