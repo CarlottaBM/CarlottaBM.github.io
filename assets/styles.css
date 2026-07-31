@@ -2612,7 +2612,9 @@ nav {
 
 .research-page .qis-page a:not(.button),
 .research-page .policy-story a:not(.button),
-.research-page .simulation-story a:not(.button) {
+.research-page .simulation-story a:not(.button),
+.research-page .ml-story a:not(.button),
+.research-page .experimental-story a:not(.button) {
   color: var(--ink);
   text-decoration-line: underline;
   text-decoration-color: color-mix(in srgb, var(--active-accent) 55%, transparent);
@@ -2624,7 +2626,11 @@ nav {
 .research-page .policy-story a:not(.button):hover,
 .research-page .policy-story a:not(.button):focus-visible,
 .research-page .simulation-story a:not(.button):hover,
-.research-page .simulation-story a:not(.button):focus-visible {
+.research-page .simulation-story a:not(.button):focus-visible,
+.research-page .ml-story a:not(.button):hover,
+.research-page .ml-story a:not(.button):focus-visible,
+.research-page .experimental-story a:not(.button):hover,
+.research-page .experimental-story a:not(.button):focus-visible {
   text-decoration-color: var(--active-accent);
   outline: none;
 }

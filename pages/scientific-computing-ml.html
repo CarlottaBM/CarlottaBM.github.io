@@ -31,59 +31,39 @@
 
 <main class="page" id="top">
   <a class="back-link" href="../index.html#portfolio">← Back to research map</a>
-  <div class="page-with-toc">
-    <article class="page-card">
-      <p class="eyebrow">Numerical methods · physical models · machine learning</p>
+  <div class="research-content">
+    <article class="page-card ml-story">
       <h1>Machine Learning</h1>
       <section id="overview">
+        <h2>How can a model reveal the physics hidden in data?</h2>
         <p class="lede">
-          I use machine learning to model physical systems, test scientific assumptions, and extract structure from experimental data.
+          I use machine learning to extract physical information from experimental measurements and to study decision-making in complex modeled systems.
         </p>
         <p>
-          I am especially interested in physically interpretable methods: models shaped by governing equations, boundary conditions, and measurement constraints rather than treated as black boxes.
+          I am especially interested in models whose behavior can be interpreted, tested, and connected back to the system that produced the data.
         </p>
       </section>
-      <section id="work">
-        <h2>Selected work</h2>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Physics-Informed Neural Networks</h3>
-            <p>
-              Coursework on PINNs for neutron transport, including trial functions, loss construction, and boundary-dependent model design.
-            </p>
-          </article>
-          <article class="project-card">
-            <h3>Scientific image analysis</h3>
-            <p>
-              Image-analysis workflows for detector features and track geometry, using computational methods to turn imperfect measurements into physical evidence.
-            </p>
-          </article>
-          <article class="project-card">
-            <h3>Simulation and numerical modeling</h3>
-            <p>
-              Python and QuTiP models of quantum algorithms, walks, transport, and coupled systems, used to compare theory with physical intuition.
-            </p>
-          </article>
-        </div>
+
+      <section id="cr39">
+        <h2>CR-39 nuclear track analysis</h2>
+        <p>
+          I am developing a machine-learning pipeline for CR-39 nuclear track detector images. The workflow combines ilastik-based preprocessing, feature extraction, and classification to distinguish etched track morphologies.
+        </p>
+        <p>
+          The broader goal is to infer latent physical information—such as particle energy, direction, and source parameters—from track geometry. This requires combining unsupervised and physics-informed methods with an understanding of how the detector and etching process shape the images.
+        </p>
       </section>
-      <section id="skills">
-        <h2>What this demonstrates</h2>
-        <ul>
-          <li>Scientific Python, numerical modeling, and simulation-driven reasoning.</li>
-          <li>Comfort moving between mathematical models, experimental constraints, and code.</li>
-          <li>Interest in physically interpretable machine learning rather than black-box modeling.</li>
-        </ul>
+
+      <section id="reinforcement-learning">
+        <h2>Reinforcement learning</h2>
+        <p>
+          In a team project for Modeling with Machine Learning, I am exploring how a reinforcement-learning agent can learn decisions through interaction with a modeled environment. The project focuses on defining the environment and reward, training a policy, and evaluating what the learned behavior reveals about the underlying system.
+        </p>
+        <p>
+          The project code and ongoing work are available in our <a href="https://github.com/samuelcwu/modeling_with_ml_project_s26" target="_blank" rel="noopener">GitHub repository</a>.
+        </p>
       </section>
     </article>
-    <aside class="page-toc" aria-label="Page contents">
-      <p class="toc-title">Contents</p>
-      <nav class="toc-links">
-        <a href="#top">Overview</a>
-        <a href="#work">Selected work</a>
-        <a href="#skills">Skills</a>
-        <a class="toc-back" href="../index.html#portfolio">← Back to map</a>
-      </nav>
-    </aside>
   </div>
 </main>
 </body>

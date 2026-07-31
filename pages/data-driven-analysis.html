@@ -31,59 +31,42 @@
 
 <main class="page" id="top">
   <a class="back-link" href="../index.html#portfolio">← Back to research map</a>
-  <div class="page-with-toc">
-    <article class="page-card">
-      <p class="eyebrow">Measurement · detectors · experimental data</p>
+  <div class="research-content">
+    <article class="page-card experimental-story">
       <h1>Experimental Work</h1>
       <section id="overview">
+        <h2>Tools for asking physical questions</h2>
         <p class="lede">
-          I work on analysis pipelines that turn imperfect measurements into physically meaningful evidence.
+          My experimental work spans detector characterization, vacuum and gas-loading systems, and quantum-optics protocols.
         </p>
         <p>
-          Much of this work is tied to research settings where raw data is not public. This page therefore keeps the description short and points to the CV/contact path for details.
+          Across these projects, I am interested in the full path from apparatus and calibration to analysis and a defensible physical result.
         </p>
       </section>
-      <section id="work">
-        <h2>Work areas</h2>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>CR-39 Detector Image Analysis</h3>
-            <p>
-              Image-analysis workflows for track geometry, detector features, and physical inference from etched detector images.
-            </p>
-          </article>
-          <article class="project-card">
-            <h3>Neutron and Background Measurements</h3>
-            <p>
-              Statistical analysis of detector backgrounds, calibration runs, count-rate distributions, and uncertainty in low-signal experimental settings.
-            </p>
-          </article>
-          <article class="project-card">
-            <h3>Quantum Engineering Measurements</h3>
-            <p>
-              Experience connecting idealized quantum protocols to real measurement constraints, calibration, and noisy data.
-            </p>
-          </article>
-        </div>
+
+      <section id="arpa-e">
+        <h2>Detection and characterization in the ARPA-E project</h2>
+        <p>
+          At MIT, I have worked on an ARPA-E project testing nuclear-anomaly claims in gas-loaded metal-hydrogen systems. I helped design and assemble vacuum and gas-loading setups, integrate components, and leak test the completed platform.
+        </p>
+        <p>
+          For particle detection, I calibrated Eljen liquid-scintillation neutron detectors with a Cf-252 source and established reproducible background baselines. This work included count-rate distributions, background separation, and uncertainty analysis; a public output is the <a href="https://github.com/project-ida/arpa-e-experiments/blob/main/tutorials/Eljen-Background-Characterization.ipynb" target="_blank" rel="noopener">Eljen background characterization notebook</a>.
+        </p>
+        <p>
+          I also use CR-39 track detectors to study charged-particle signatures. I developed workflows for detector-image preprocessing, track geometry, and physical inference; the machine-learning component is described on my <a href="scientific-computing-ml.html">Machine Learning page</a>. I presented work from the wider project at the ARPA-E Energy Innovation Summit.
+        </p>
       </section>
-      <section id="links">
-        <h2>Where to inspect more</h2>
-        <ul>
-          <li><a href="../media/CV.pdf" target="_blank" rel="noopener">CV</a> for role and project context.</li>
-          <li><a href="contact.html">Contact</a> for details on non-public research artifacts.</li>
-          <li><a href="scientific-computing-ml.html">Machine Learning</a> for related modeling work.</li>
-        </ul>
+
+      <section id="quantum-optics">
+        <h2>Quantum optics and E91 key distribution</h2>
+        <p>
+          In MIT’s Quantum Engineering Platforms course, I built a project based on the E91 quantum key-distribution protocol. The work translated an entanglement-based security protocol into an experimental workflow involving state preparation, measurement-basis choices, correlation analysis, and key generation.
+        </p>
+        <p>
+          This project gave me experience connecting an ideal quantum-information protocol to the practical constraints of a quantum-optics platform: calibration, finite data, imperfect measurements, and the question of which correlations can actually be trusted.
+        </p>
       </section>
     </article>
-    <aside class="page-toc" aria-label="Page contents">
-      <p class="toc-title">Contents</p>
-      <nav class="toc-links">
-        <a href="#top">Overview</a>
-        <a href="#work">Work areas</a>
-        <a href="#links">Links</a>
-        <a class="toc-back" href="../index.html#portfolio">← Back to map</a>
-      </nav>
-    </aside>
   </div>
 </main>
 </body>
