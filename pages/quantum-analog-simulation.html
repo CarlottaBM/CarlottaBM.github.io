@@ -18,11 +18,11 @@
     <div class="nav-dropdown">
       <a class="nav-trigger" href="../index.html#portfolio">Research</a>
       <div class="nav-menu" aria-label="Research pages">
-        <a href="quantum-information.html">Quantum Information &amp; Resources</a>
-        <a href="quantum-analog-simulation.html">Quantum &amp; Analogue Simulation</a>
-        <a href="data-driven-analysis.html">Data-Driven Experimental Analysis</a>
-        <a href="scientific-computing-ml.html">Scientific Computing &amp; ML</a>
+        <a href="quantum-information.html">Quantum Information</a>
         <a href="science-policy.html">Science Policy &amp; Field Building</a>
+        <a href="scientific-computing-ml.html">Machine Learning</a>
+        <a href="data-driven-analysis.html">Experimental Work</a>
+        <a href="quantum-analog-simulation.html">Quantum &amp; Analogue Simulation</a>
       </div>
     </div>
     <a href="contact.html">Contact</a>
@@ -32,57 +32,52 @@
 <main class="page" id="top">
   <a class="back-link" href="../index.html#portfolio">← Back to research map</a>
   <div class="page-with-toc">
-    <article class="page-card">
-      <p class="eyebrow">Quantum simulation · analogue systems · physical intuition</p>
+    <article class="page-card simulation-story">
       <h1>Quantum &amp; Analogue Simulation</h1>
-      <section id="overview">
+      <section id="question">
+        <h2>When does quantum structure change how a system moves?</h2>
         <p class="lede">
           I use simulation to understand transport, coupling, resonance, and the boundary between classical and quantum behavior.
         </p>
         <p>
-          The strongest artifacts here are my thesis work on delocalization and the simulation notes that connect quantum algorithms, walks, and physical intuition.
+          I am interested in comparing quantum systems with classical analogues: identifying which behavior depends on genuinely quantum structure and which can be reproduced by a simpler model.
         </p>
       </section>
-      <section id="projects">
-        <h2>Project links</h2>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Delocalization as a Resource</h3>
-            <p>
-              Bachelor thesis work comparing delocalization in quantum annealing and exciton diffusion in light-harvesting systems.
-            </p>
-            <a class="text-link" href="delocalization-resource.html">Read project page →</a>
-          </article>
-          <article class="project-card">
-            <h3>Quantum Walks and Transport</h3>
-            <p>
-              Simulation notes connecting quantum walks, Grover search, and transport models.
-            </p>
-            <a class="text-link" href="quantum-algorithms-simulation.html">Read simulation page →</a>
-          </article>
-          <article class="project-card">
-            <h3>Current Extension</h3>
-            <p>
-              Coupled oscillator analog models for resonance, mode coupling, driven response, and energy transfer.
-            </p>
-          </article>
-        </div>
+
+      <section id="delocalization">
+        <h2>Delocalization as a resource</h2>
+        <p>
+          My bachelor’s thesis compared quantum and classical descriptions of transport. I studied how a state spread across several sites can support motion through an energy or graph landscape, and how this idea appears in both quantum annealing and exciton diffusion in light-harvesting systems.
+        </p>
+        <p>
+          Quantum walks provided a common language for comparing these problems. They let me explore how coherence, delocalization, and environmental coupling affect transport—and when a classical random walk captures the same behavior.
+        </p>
+        <p>
+          This “resource” perspective connects back to <a href="quantum-information.html">quantum information</a>: rather than treating quantumness as a binary property, it asks which physical feature is useful for a particular task. The full analysis is available in my <a href="thesis.html">undergraduate thesis</a>.
+        </p>
       </section>
-      <section id="skills">
-        <h2>What this demonstrates</h2>
-        <ul>
-          <li>Physical modeling across quantum and classical analog systems.</li>
-          <li>Ability to translate abstract dynamics into inspectable simulations.</li>
-          <li>Technical judgment about where simplified models are useful.</li>
-        </ul>
+
+      <section id="current-work">
+        <h2>Extending the comparison</h2>
+        <p>
+          I am continuing this line of thinking through coupled-oscillator analogue models of resonance, driven response, mode coupling, and energy transfer. These systems offer an intuitive way to test how much of an apparently quantum dynamical effect follows from wave behavior alone.
+        </p>
+      </section>
+
+      <section id="direction">
+        <h2>The broader question</h2>
+        <p>
+          Across these models, I am asking the same question: what can simulation reveal about a physical system that we could not learn efficiently from a classical description?
+        </p>
       </section>
     </article>
     <aside class="page-toc" aria-label="Page contents">
       <p class="toc-title">Contents</p>
       <nav class="toc-links">
-        <a href="#top">Overview</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#question">The question</a>
+        <a href="#delocalization">Delocalization</a>
+        <a href="#current-work">Current work</a>
+        <a href="#direction">Broader question</a>
         <a class="toc-back" href="../index.html#portfolio">← Back to map</a>
       </nav>
     </aside>

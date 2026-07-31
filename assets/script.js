@@ -1,24 +1,24 @@
 const directions = {
   "quantum-information": {
-    title: "Quantum Information & Resources",
+    title: "Quantum Information",
     text: "Studying the resources, limits, and algorithms that make quantum systems useful for computation and simulation.",
     link: "pages/quantum-information.html"
   },
 
   "quantum-analog-simulation": {
-    title: "Quantum & Analog Simulation",
+    title: "Quantum & Analogue Simulation",
     text: "Using quantum, classical, and computational models to study physical systems, from exciton diffusion and light harvesting to coupled oscillator analogs of quantum dynamics.",
     link: "pages/quantum-analog-simulation.html"
   },
 
   "data-driven-analysis": {
-    title: "Data-Driven Experimental Analysis",
+    title: "Experimental Work",
     text: "Using statistical tools, image analysis, and machine learning to extract physical meaning from experimental measurements.",
     link: "pages/data-driven-analysis.html"
   },
 
   "scientific-computing-ml": {
-    title: "Scientific Computing & ML",
+    title: "Machine Learning",
     text: "Building computational models of physical systems using simulation, numerical methods, and machine learning.",
     link: "pages/scientific-computing-ml.html"
   },

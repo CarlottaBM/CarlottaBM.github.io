@@ -5,7 +5,7 @@ Personal website for Carlotta Barone MacDonald.
 ## Structure
 
 - `index.html` — home page with the interactive research atom
-- `pages/` — About, Contact, concise research direction pages, and selected project pages
+- `pages/` — About, Contact, and five concise research direction pages
 - `assets/` — CSS and JavaScript
 - `media/` — images, CV, and other media files
 
@@ -18,4 +18,4 @@ Personal website for Carlotta Barone MacDonald.
 
 ## Research pages
 
-Research direction pages should stay concise. Their main purpose is to point readers toward concrete project pages, public artifacts, external accomplishments, the CV, or contact paths for non-public work.
+Research direction pages should stay concise and include short, self-contained blurbs about relevant work instead of linking to separate project pages.

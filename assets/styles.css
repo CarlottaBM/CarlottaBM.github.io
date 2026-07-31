@@ -2610,6 +2610,25 @@ nav {
   text-underline-offset: 3px;
 }
 
+.research-page .qis-page a:not(.button),
+.research-page .policy-story a:not(.button),
+.research-page .simulation-story a:not(.button) {
+  color: var(--ink);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--active-accent) 55%, transparent);
+  text-underline-offset: 3px;
+}
+
+.research-page .qis-page a:not(.button):hover,
+.research-page .qis-page a:not(.button):focus-visible,
+.research-page .policy-story a:not(.button):hover,
+.research-page .policy-story a:not(.button):focus-visible,
+.research-page .simulation-story a:not(.button):hover,
+.research-page .simulation-story a:not(.button):focus-visible {
+  text-decoration-color: var(--active-accent);
+  outline: none;
+}
+
 .research-page .page-card ul,
 .research-page .page-card ol {
   padding-left: 1.2rem;
