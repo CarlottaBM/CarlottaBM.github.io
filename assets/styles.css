@@ -1932,21 +1932,19 @@ nav {
 
 .update-gallery {
   grid-column: 2;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  align-items: flex-end;
   gap: 14px;
+  flex-wrap: nowrap;
   margin-top: 0.75rem;
 }
 
 .update-gallery-image {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
-  aspect-ratio: 4 / 3;
-  max-width: none;
-  max-height: none;
-  object-fit: cover;
-  background: var(--card);
+  max-width: calc((100% - 28px) / 3);
+  max-height: 170px;
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.10);
@@ -2080,6 +2078,10 @@ nav {
 
   .update-gallery {
     grid-column: 1;
+  }
+
+  .update-gallery-image {
+    max-height: 135px;
   }
 
 }
