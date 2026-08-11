@@ -1936,15 +1936,17 @@ nav {
   align-items: flex-end;
   gap: 14px;
   flex-wrap: nowrap;
+  overflow-x: auto;
   margin-top: 0.75rem;
 }
 
 .update-gallery-image {
   display: block;
   width: auto;
-  height: auto;
-  max-width: calc((100% - 28px) / 3);
-  max-height: 170px;
+  height: 160px;
+  max-width: none;
+  max-height: none;
+  flex: 0 0 auto;
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.10);
@@ -2081,7 +2083,7 @@ nav {
   }
 
   .update-gallery-image {
-    max-height: 135px;
+    height: 120px;
   }
 
 }
