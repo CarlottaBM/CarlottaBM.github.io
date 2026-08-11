@@ -1979,6 +1979,13 @@ nav {
   object-fit: contain;
 }
 
+.update-gallery-equal-height .update-gallery-image {
+  width: calc((100% - 28px) / 3);
+  height: 150px;
+  max-width: none;
+  object-fit: cover;
+}
+
 .image-lightbox {
   width: min(92vw, 1100px);
   max-width: none;
@@ -2103,6 +2110,11 @@ nav {
     width: auto;
     height: auto;
     max-height: 120px;
+  }
+
+  .update-gallery-equal-height .update-gallery-image {
+    width: calc((100% - 28px) / 3);
+    height: 120px;
   }
 }
 
